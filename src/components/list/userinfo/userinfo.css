@@ -1,0 +1,29 @@
+.userii{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+}
+.userr{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.icons{
+    display: flex;
+    gap: 15px;
+    img{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}

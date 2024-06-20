@@ -1,0 +1,163 @@
+.chatt{
+    display: flex;
+    flex-direction: column;
+    flex:2;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    height: 100%;
+    .top{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid;
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .texts{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                span{
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: grey;
+                }
+            }
+        }
+        .icons{
+            gap: 20px;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .center{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+            padding: 20px;
+            flex: 1;
+            overflow-y: scroll;
+        .message{
+            max-width: 70%;
+            display: flex;
+            gap: 20px;
+            
+            &.own{
+                align-self: flex-end;
+                .texts{
+                    p{
+                        background-color: rgba(216, 112, 147, 0.768);
+                        border-radius: 15px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .texts{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            img{
+                width: 100%;
+                height: 300px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            p{
+                background-color: rgba(208, 82, 204, 0.697);
+                padding: 10px;
+                border-radius: 15px;
+                opacity: 0.98;
+                font-size: 16px;
+            }
+            span{
+                font-size: 13px;
+            }
+        }
+
+    }
+    .bottom{
+        margin-top: auto;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 0.5px solid;
+        gap: 15px;
+        .icons{
+            display: flex;
+            gap: 18px;
+            img{
+                width: 25px;
+                height: 25px;
+
+            }
+
+        }
+        input{
+            flex: 1;
+            background-color: rgba(149, 28, 180, 0.357);
+            border: none;
+            outline: none;
+            color: white;
+            border-radius: 8px;
+            padding: 8px;
+            padding-left: 15px;
+            font-size: 20px;
+            &:disabled{
+                
+                cursor: not-allowed;
+            }
+        }
+        
+        .sendbtn{
+            border-radius: 5px;
+            background-color: rgba(149, 28, 180, 0.357);
+            font-size: 18px;
+            color: whitesmoke;
+            padding: 10px 20px;
+            cursor: pointer;
+            &:disabled{
+                background-color: rgba(150, 28, 180, 0.14);
+                cursor: not-allowed;
+            }
+        }
+        .emoji{
+            position: relative;
+            img{
+                height: 25px;
+                width: 25px;
+                cursor: pointer;
+            }
+            .picker{
+                position: absolute;
+                bottom: 50px;
+                left: 0px;
+            }
+        }
+    }
+}

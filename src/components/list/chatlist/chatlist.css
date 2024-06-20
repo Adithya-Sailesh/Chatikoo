@@ -1,0 +1,69 @@
+.chattlist{
+    flex: 1;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
+    .search{
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+        padding: 15px;
+        .searchbar{
+            flex: 1;
+            display: flex;
+            background-color: rgba(149, 28, 180, 0.357);
+            align-items: center;
+            gap: 15px;
+            border-radius: 40px;
+            padding: 5px;
+            input{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                flex: 1;
+                height: fit-content;
+            }
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+    }
+}
+.addbtn{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(149, 28, 180, 0.357);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    img{
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .texts{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        span{
+            font-weight: 500;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+}
