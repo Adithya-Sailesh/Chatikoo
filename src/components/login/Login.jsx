@@ -41,8 +41,8 @@ function Login() {
         e.preventDefault()
         setloading(true)
         const formData=new FormData(e.target)
-        const {username,email,password}=Object.fromEntries(formData);
-        if(!username || !email || !password){
+        const {username,email,password,bio}=Object.fromEntries(formData);
+        if(!username || !email || !password || !bio){
             setloading(false)
             return toast.warn("Plese Enter the details");
         } 
@@ -64,8 +64,10 @@ function Login() {
             await setDoc(doc(db, "users", res.user.uid), {
             username: username,
             email,
+            bio,
             avatar:imgUrl,
             id:res.user.uid,
+            
             blocked:[],
             });
             await setDoc(doc(db, "userchats", res.user.uid), {
@@ -100,8 +102,10 @@ function Login() {
              Upload A ProfilePic  </label>
         <input type='file' id="file" style={{display:"none"} } onChange={handleAvatar}/>
         <input type="text" name="username"  placeholder='username'/>
+        
         <input type='email' placeholder='Email' name="email"></input>
         <input type="password" name="password"  placeholder='Password' />
+        <input type="text" name="bio"  placeholder='Tell Us A Bio'/>
         <button disabled={loading}>{loading ? "Loading":"SignUp"}</button>
         </form>
       </div>

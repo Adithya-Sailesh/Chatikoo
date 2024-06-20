@@ -53,14 +53,18 @@
             flex: 1;
             overflow-y: scroll;
         .message{
+            min-width: 20%;
+            width: max-content;
             max-width: 70%;
+            
             display: flex;
             gap: 20px;
             
             &.own{
                 align-self: flex-end;
+
                 .texts{
-                    p{
+                    p{ 
                         background-color: rgba(216, 112, 147, 0.768);
                         border-radius: 15px;
                         padding: 10px;
@@ -76,6 +80,7 @@
             object-fit: cover;
         }
         .texts{
+            
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -89,7 +94,7 @@
 
             p{
                 background-color: rgba(208, 82, 204, 0.697);
-                padding: 10px;
+                padding: 15px;
                 border-radius: 15px;
                 opacity: 0.98;
                 font-size: 16px;

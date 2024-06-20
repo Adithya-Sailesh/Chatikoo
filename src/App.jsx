@@ -21,7 +21,7 @@ const App = () => {
       };
   }, [fetchUserInfo])
   if (isLoading) return <div className="loading"> 
-  <img src="./logo.png"></img>
+  <img src="./logo2e.png" className="loadinganim"></img>
   
   </div>
   return (

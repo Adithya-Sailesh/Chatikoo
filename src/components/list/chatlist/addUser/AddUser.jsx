@@ -5,24 +5,32 @@ import { arrayUnion, collection, doc, getDoc, getDocs, query, serverTimestamp, s
 import { useUserStore } from '../../../../lib/userStore'
 function AddUser() {
   const [user, setuser] = useState(null)
+  const [found, setfound] = useState(false)
+  const [loading, setloading] = useState(false)
   const{currentUser}=useUserStore()
   const handleSearch=async (e)=>{
     e.preventDefault()
     const formData=new FormData(e.target)
     const username=formData.get("username")
     try{
+      setloading(true)
       const userRef = collection(db, "users");
       const q = query(userRef, where("username", "==", username));
       const querySnapShot=await getDocs(q)
       if(!querySnapShot.empty){
           setuser(querySnapShot.docs[0].data())
+          setfound(false)
       }else {
         setuser(null);
+        setfound((e)=>!e)
       }
       
     }
     catch(err){
       console.log(err)
+    }
+    finally{
+      setloading(false)
     }
   }
   const handleAdd =async()=>{
@@ -59,9 +67,12 @@ function AddUser() {
   return (
     <div className='adduser'>
       <form onSubmit={handleSearch}>
-            <input type='text' placeholder='UserName' name="username"></input>
-            <button>Search</button>
+            <input type='text' placeholder='UserName' name="username" required></input>
+            <button>{loading? "Searching":'Search'}</button>
       </form>
+      {found &&
+        <div className='found'>NOT FOUND</div>
+      }
       {user && <div className="user">
             <div className="detail">
                 <img src={user.avatar || './avatar.png'}></img>
