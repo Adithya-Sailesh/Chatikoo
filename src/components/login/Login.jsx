@@ -105,7 +105,7 @@ function Login() {
         
         <input type='email' placeholder='Email' name="email"></input>
         <input type="password" name="password"  placeholder='Password' />
-        <input type="text" name="bio"  placeholder='Tell Us A Bio'/>
+        <input type="text" name="bio"  placeholder='Tell Us Ur Bio'/>
         <button disabled={loading}>{loading ? "Loading":"SignUp"}</button>
         </form>
       </div>
