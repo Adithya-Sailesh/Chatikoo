@@ -54,7 +54,7 @@ function Login() {
         const q = query(usersRef, where("username", "==", username));
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {
-        return toast.warn("UserName already Exists Select another username");
+        return toast.warn("UserName Already Exists Select Another Username");
         }
         
         
@@ -101,7 +101,7 @@ function Login() {
             <img src={avatar.url || "./avatar.png"} alt="" />
              Upload A ProfilePic  </label>
         <input type='file' id="file" style={{display:"none"} } onChange={handleAvatar}/>
-        <input type="text" name="username"  placeholder='username'/>
+        <input type="text" name="username"  placeholder='Username'/>
         
         <input type='email' placeholder='Email' name="email"></input>
         <input type="password" name="password"  placeholder='Password' />
