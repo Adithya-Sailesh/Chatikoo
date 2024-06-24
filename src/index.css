@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  overflow-y: hidden;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -16,7 +18,7 @@ body{
 .container{
   width: 90vw;
   height: 90vh;
-  background-color: rgba(75, 14, 156, 0.797);
+  /* background-color: ; */
   backdrop-filter: blur(10px);
   border-radius: 10px;
   opacity: 0.9;
