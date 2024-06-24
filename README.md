@@ -22,19 +22,15 @@ Zustand is used for state management, ensuring efficient handling of application
 
 
 
-User Experience:
+### User Experience:
 Chatikoo focuses on delivering a smooth and enjoyable chatting experience:
+![Home page](sample2.png)
 
 No Verification Required: Users can dive straight into conversations without the hassle of email or phone verification.
 Instant Messaging: Messages appear instantly, creating a real-time chat environment.
 Intuitive Controls: Clear and straightforward buttons for sending messages and images ensure ease of use.
-Personalization: Users can customize their profiles and manage their interactions, including blocking unwanted contacts.
-Security and Privacy:
-Secure Authentication: Firebase authentication ensures that user credentials are protected.
-Data Encryption: All data transmissions are encrypted, maintaining user privacy and security.
-Future Enhancements:
-Potential future updates could include:
 
+# Future Enhancement:
 Additional Media Support: Expanded support for video sharing and other media types.
 Enhanced Notifications: Alerts for new messages and updates.
 Customizable Themes: Personalized themes and UI customization options.
