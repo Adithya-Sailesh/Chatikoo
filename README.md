@@ -10,7 +10,7 @@ Users can send and receive text messages in real-time, enabling smooth and immed
 
 ### Image Sharing: 
 It supports direct image uploads from the user's device, making it easy to share photos and visuals within conversations.
-
+ ![Home page](sample1.png)
 ### Blocking Option: 
 To ensure a safe environment, Chatikoo includes a feature that allows users to block others, giving them control over their interactions.
 
