@@ -105,7 +105,9 @@ function Chat() {
         <div className="user">
           <img src={user?.avatar || './avatar.png'} alt="Avatar" />
           <div className='texts'>
-            <span>{user?.username}</span>
+            
+            {/* <span>{(user?.username)}</span> */}
+            <span>{(user?.username && user.username.toUpperCase())}</span>
             <p>{currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
           </div>
         </div>

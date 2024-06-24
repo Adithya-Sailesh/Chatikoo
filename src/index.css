@@ -18,10 +18,11 @@ body{
 .container{
   width: 90vw;
   height: 90vh;
+  min-width: fit-content;
   /* background-color: ; */
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  opacity: 0.9;
+  opacity: 0.92;
   display: flex;
 }
 .loading{
