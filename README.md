@@ -4,7 +4,7 @@
 ## Key Features:
 ### Simple Interface: 
 Chatikoo boasts an intuitive design that allows users to start chatting instantly without any complex setup.
-
+ ![Home page](sample3.png)
 ### Messaging Functionality: 
 Users can send and receive text messages in real-time, enabling smooth and immediate communication.
 
